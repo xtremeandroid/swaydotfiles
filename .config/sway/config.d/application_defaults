@@ -5,12 +5,19 @@ for_window [app_id="firefox"] focus
 assign [class="firefox"] 2
 for_window [class="firefox"] focus
 
+assign [app_id="code"] 3
+for_window [app_id="firefox"] focus
+
+assign [class="code"] 3
+for_window [class="firefox"] focus
+
+
+
+
+
+
 assign [app_id=thunar] 3
 for_window [app_id=thunar] focus
-
-assign [class="Telegram"] 4
-for_window [class="Telegram"] focus
-
 
 for_window [app_id="xed"] focus
 
@@ -44,6 +51,7 @@ for_window [title="nmtui"] floating enable,  resize set width 50 ppt height 70 p
 for_window [app_id="xsensors"] floating enable
 for_window [title="Save File"] floating enable
 for_window [app_id="firefox" title="Firefox — Sharing Indicator"] kill
+for_window [app_id="floating-terminal"] floating enable, resize set 800 800
 
 # Inhibit idle
 for_window [app_id="firefox"] inhibit_idle fullscreen

@@ -16,32 +16,11 @@ set $volume_mute $(pactl set-sink-mute @DEFAULT_SINK@ toggle && pactl get-sink-m
 set $mic_mute $(pactl set-source-mute @DEFAULT_SOURCE@ toggle && pactl get-source-mute @DEFAULT_SOURCE@ | sed -En "/no/ s/.*/$($source_volume)/p; /yes/ s/.*/0/p")
 
 # Your preferred terminal emulators
-set $term-float kitty
-
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
+set $term kitty
 set $menu fuzzel
 
-### Idle configuration
-# exec swayidle -w\
-#     timeout 1070 'swaylock -f -C ~/.config/swaylock/config'\
-#     timeout 770 'swaymsg "output * power off"' \
-#     resume 'swaymsg "output * power on"' \
-#     before-sleep 'swaylock -C ~/.config/swaylock/config'
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-
-### Key bindings
-#
-# Basics:
-#
-    # Start a floating terminal
-    bindsym $mod+Return exec $term-float
-
-    # Open the power menu
-    bindsym $mod+Shift+e exec $powermenu
+    # Start a terminal
+    bindsym $mod+Return exec $term
 
     # Kill focused window
     bindsym $mod+q kill
@@ -56,13 +35,13 @@ set $menu fuzzel
     bindsym $mod+l exec swaylock -f && systemctl suspend
 
     # TurnOff Laptop Display
-    bindsym $mod+m output "eDP-1" disable
+    bindsym $mod+Alt+m output "eDP-1" disable
 
     # TurnOn Laptop Display
     bindsym $mod+Shift+m output "eDP-1" enable
     
     # Open Config Folder in VSCode
-    bindsym $mod+c exec code ~/.config/ --ozone-platform-hint=auto
+    bindsym $mod+alt+c exec code ~/.config/
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -76,15 +55,14 @@ set $menu fuzzel
 
 #
 # Moving around:
-
-    # Ditto, with arrow keys
+    # with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
-#
+
 # Workspaces:
-#
+
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
@@ -96,6 +74,7 @@ set $menu fuzzel
     bindsym $mod+8 workspace number 8
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
+
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
@@ -107,21 +86,19 @@ set $menu fuzzel
     bindsym $mod+Shift+8 move container to workspace number 8
     bindsym $mod+Shift+9 move container to workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10
-    # Note: workspaces can have any name you want, not just numbers.
-    # We just use 1-10 as the default.
-#
+
 # Layout stuff:
-#
+
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    # bindsym $mod+b splith
+    # bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    # bindsym $mod+s layout stacking
+    # bindsym $mod+w layout tabbed
+    # bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -151,7 +128,7 @@ set $menu fuzzel
 #
 mode "resize" {
 
-    # Ditto, with arrow keys
+    # with arrow keys
     bindsym Left resize shrink width 10px
     bindsym Right resize grow width 10px
     bindsym Up resize shrink height 10px
@@ -172,36 +149,36 @@ bindsym $mod+r mode "resize"
 
 #
 # Volume
-#
-    # Control volume trough pamixer
-    # bindsym --locked XF86AudioRaiseVolume exec pamixer -ui 2
-    # bindsym --locked XF86AudioLowerVolume exec pamixer -ud 2
-    # bindsym --locked XF86AudioMute exec pamixer -t
     
     # Control volume directly trough pactl
     bindsym --locked XF86AudioRaiseVolume exec $volume_up
     bindsym --locked XF86AudioLowerVolume exec $volume_down
     bindsym --locked XF86AudioMute exec $volume_mute
-#
+
 # Player
-#
+
     bindsym XF86AudioPlay exec playerctl play
     bindsym XF86AudioPause exec playerctl pause
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
-#
+
 # Backlight
-#
+
     bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +5%
     bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
 #
 # App shortcuts
 #
-    bindsym alt+f exec thunar
-    bindsym alt+b exec firefox
-#
+    bindsym $mod+e exec thunar
+    bindsym $mod+w exec firefox
+    bindsym $mod+v exec code
+    bindsym $mod+c exec google-chrome-stable
+    bindsym $mod+b exec brave
+    bindsym $mod+j exec joplin-desktop
+    bindsym $mod+Shift+return exec kitty --class=floating-terminal
+
 # Screenshots
-#
+
     bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
     bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
 

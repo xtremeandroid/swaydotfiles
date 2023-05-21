@@ -7,7 +7,8 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 exec /usr/bin/xdg-user-dirs-update
-exec swaybg -i ~/.config/backgrounds/wall5.png -m fill
 exec dunst
 exec_always --no-startup-id autotiling
+exec mpd
 exec_always gammastep
+exec swaybg -i ~/.config/backgrounds.wall5.png -m fill
