@@ -59,15 +59,6 @@
         "escape": true,
         "on-click": "~/.config/wofi/wofi-power.sh"
     },
-    "custom/recorder": {
-		"format": "!",
-		"return-type": "json",
-		"interval": 3,
-		"exec": "echo '{\"class\": \"recording\"}'",
-		"exec-if": "pgrep wf-recorder",
-        "tooltip": false,
-        "on-click": "killall -s SIGINT wf-recorder"
-	},
     "battery": {
         "format": "{capacity}%",
         "format-icons": ["", "", "", "", ""],
