@@ -1,0 +1,7 @@
+# Initial Setup 
+# exec ~/set_once.sh
+
+# user config directory
+include $HOME/.config/sway/config.d/*
+
+

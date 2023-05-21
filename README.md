@@ -1,0 +1,2 @@
+# dotfilessway
+Arch Sway Configs
