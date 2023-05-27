@@ -12,10 +12,7 @@
 
 ## Apps
 
-* yay -S brave-bin firefox visual-studio-code-bin joplin-appimage tlpui obs-studio google-chrome qbittorrent gammastep mpv mpd vim flatpak fastfetch aria2 yt-dlp radeontop libva-mesa-driver libva-vdpau-driver-vp9-git ncmpcpp neovim qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat gnome-keyring git libsecret gvfs-mtp otf-font-awesome ttf-font-awesome papirus-icon-theme mpc ebtables iptables droidcam-obs-plugin ff2mpv-native-messaging-host-git autotiling qogir-gtk-theme zenmonitor3-git geekbench speedtest-cli ly zsh auto-cpufreq 
-
-* sudo flatpak install flathub org.kde.kdenlive 
-* sudo flatpak install flathub org.gimp.GIMP 
+* yay -S --needed brave-bin firefox visual-studio-code-bin joplin-appimage obs-studio google-chrome qbittorrent gammastep mpv mpd vim flatpak fastfetch aria2 yt-dlp radeontop libva-mesa-driver libva-vdpau-driver-vp9-git ncmpcpp gnome-keyring git libsecret gvfs-mtp otf-font-awesome ttf-font-awesome papirus-icon-theme mpc droidcam-obs-plugin ff2mpv-native-messaging-host-git autotiling qogir-gtk-theme zenmonitor3-git geekbench speedtest-cli zsh auto-cpufreq kitty wlogout swaylock-effects polkit-gnome sddm-git thunar thunar-archive-plugin file-roller p7zip pavucontrol brightnessctl lxappearance gimp kdenlive qbittorrent xdg-user-dirs dunst swaybg swayidle qogir-icon-theme
 
 ## How to get this setup?
 Install EndeavourOS Sway Community Edition and copy the.config/ folder from this git to your ~/.config/
