@@ -54,6 +54,8 @@
   git clone https://github.com/xtremeandroid/swaydotfiles.git
   cd swaydotfiles/.config
   cp -vr * ~/.config/
+  mkdir -p ~/walls/
+  mv ~/.config/backgrounds/wall5.png ~/walls/
 ```
 
 That's it, Enjoy !!
