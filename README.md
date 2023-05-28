@@ -12,27 +12,39 @@
 ## How to get this setup?
 
 ### Install yay (AUR Helper)
-* sudo pacman -S --needed git base-devel
-* git clone https://aur.archlinux.org/yay-bin.git
-* cd yay-bin
-* makepkg -si
 
+```bash
+  sudo pacman -S --needed git base-devel
+  git clone https://aur.archlinux.org/yay-bin.git
+  cd yay-bin
+  makepkg -si
+```
 ### ohMyZSH setup
-* sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-* git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-* git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+```bash
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
 
 ### Dependencies
 
-* yay -S --needed sway fastfetch gnome-keyring git libsecret gvfs-mtp papirus-icon-theme autotiling qogir-gtk-theme zsh kitty wlogout swaylock-effects polkit-gnome sddm-git thunar thunar-archive-plugin file-roller p7zip pavucontrol brightnessctl lxappearance xdg-user-dirs dunst swww-git swayidle qogir-icon-theme grim ttf-font-awesome-5 otf-font-awesome-5 xorg-xwayland mpd mpc ncmpcpp firefox ttf-dejavu inter-font fuzzel bluez bluez-utils blueman network-manager-applet xdg-desktop-portal-wlr
+```bash
+  yay -S --needed sway fastfetch gnome-keyring git libsecret gvfs-mtp papirus-icon-theme autotiling qogir-gtk-theme zsh kitty wlogout swaylock-effects polkit-gnome sddm-git thunar thunar-archive-plugin file-roller p7zip pavucontrol brightnessctl lxappearance xdg-user-dirs dunst swww-git swayidle qogir-icon-theme grim ttf-font-awesome-5 otf-font-awesome-5 xorg-xwayland mpd mpc ncmpcpp firefox ttf-dejavu inter-font fuzzel bluez bluez-utils blueman network-manager-applet xdg-desktop-portal-wlr
+``` 
 
 ### MyApps
 
-* yay -S --needed brave-bin visual-studio-code-bin joplin-appimage obs-studio google-chrome qbittorrent gammastep mpv-git vim flatpak aria2 yt-dlp radeontop libva-mesa-driver libva-vdpau-driver-vp9-git droidcam-obs-plugin ff2mpv-native-messaging-host-git zenmonitor3-git geekbench speedtest-cli auto-cpufreq openssh nodejs-lts-hydrogen npm python flatseal tk
+```bash
+  yay -S --needed brave-bin visual-studio-code-bin joplin-appimage obs-studio google-chrome qbittorrent gammastep mpv-git vim flatpak aria2 yt-dlp radeontop libva-mesa-driver libva-vdpau-driver-vp9-git droidcam-obs-plugin ff2mpv-native-messaging-host-git zenmonitor3-git geekbench speedtest-cli auto-cpufreq openssh nodejs-lts-hydrogen npm python flatseal tk
+```
 
-flatpaks : 
-* sudo flatpak install flathub org.gimp.GIMP
-* sudo flatpak install flathub org.kde.kdenlive
+### Flatpaks : 
+
+```bash
+  sudo flatpak install flathub org.gimp.GIMP
+  sudo flatpak install flathub org.kde.kdenlive
+```
 
 ### Now Just copy the.config/ folder from this git to your ~/.config/
 
