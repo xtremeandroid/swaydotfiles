@@ -62,10 +62,12 @@
 #### Note : Make sure all dependencies are installed !!
 ```bash
   mkdir -p ~/.config/
-  git clone https://github.com/xtremeandroid/swaydotfiles.git
-  cd swaydotfiles/.config
-  cp -vr * ~/.config/
+  mkdir -p ~/.local/bin/
   mkdir -p ~/walls/
+  git clone https://github.com/xtremeandroid/swaydotfiles.git
+  cd swaydotfiles
+  cp -vr .config/* ~/.config/
+  cp -vr .local/bin/* ~/.local/bin/
   mv ~/.config/backgrounds/wall5.png ~/walls/
 ```
 
