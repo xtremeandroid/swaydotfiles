@@ -49,10 +49,12 @@
 ### Now Just copy the.config/ folder from this git to your ~/.config/
 
 #### Note : Make sure all dependencies are installed !!
-
-* git clone https://github.com/xtremeandroid/swaydotfiles.git
-* cd swaydotfiles/.config
-* cp -vr * ~/.config/
+```bash
+  mkdir -p ~/.config/
+  git clone https://github.com/xtremeandroid/swaydotfiles.git
+  cd swaydotfiles/.config
+  cp -vr * ~/.config/
+```
 
 That's it, Enjoy !!
 
