@@ -28,12 +28,11 @@
 
 ### MyApps
 
-* yay -S --needed brave-bin visual-studio-code-bin joplin-appimage obs-studio google-chrome qbittorrent gammastep mpv  vim flatpak aria2 yt-dlp radeontop libva-mesa-driver libva-vdpau-driver-vp9-git droidcam-obs-plugin ff2mpv-native-messaging-host-git zenmonitor3-git geekbench speedtest-cli auto-cpufreq openssh nodejs-lts-hydrogen npm python flatseal tk
+* yay -S --needed brave-bin visual-studio-code-bin joplin-appimage obs-studio google-chrome qbittorrent gammastep mpv  vim flatpak aria2 yt-dlp radeontop libva-mesa-driver libva-vdpau-driver-vp9-git droidcam-obs-plugin ff2mpv-native-messaging-host-git zenmonitor3-git geekbench speedtest-cli auto-cpufreq openssh nodejs-lts-hydrogen npm python flatseal tk onlyoffice-bin
 
 * flatpaks : 
 * sudo flatpak install flathub org.gimp.GIMP
 * sudo flatpak install flathub org.kde.kdenlive
-* sudo flatpak install flathub org.onlyoffice.desktopeditors
 
 ### Now Just copy the.config/ folder from this git to your ~/.config/
 
