@@ -33,7 +33,7 @@
 ### Dependencies
 
 ```bash
-  yay -S --needed sway waybar fastfetch gnome-keyring git libsecret gvfs-mtp papirus-icon-theme autotiling qogir-gtk-theme zsh kitty wlogout swaylock-effects polkit-gnome sddm-git thunar thunar-archive-plugin file-roller p7zip pavucontrol brightnessctl lxappearance xdg-user-dirs dunst swww-git swayidle qogir-icon-theme grim ttf-font-awesome-5 otf-font-awesome-5 xorg-xwayland mpd mpc ncmpcpp firefox ttf-dejavu inter-font fuzzel bluez bluez-utils blueman network-manager-applet xdg-desktop-portal-wlr
+  yay -S --needed sway waybar fastfetch gnome-keyring git libsecret gvfs-mtp papirus-icon-theme autotiling qogir-gtk-theme zsh kitty wlogout swaylock-effects polkit-gnome sddm-git thunar thunar-archive-plugin file-roller p7zip pavucontrol brightnessctl lxappearance xdg-user-dirs dunst swww-git swayidle qogir-icon-theme grim ttf-font-awesome-5 otf-font-awesome-5 xorg-xwayland mpd mpc ncmpcpp firefox ttf-dejavu inter-font fuzzel bluez bluez-utils blueman network-manager-applet xdg-desktop-portal-wlr vim nano htop
 ```
 
 ### ohMyZSH setup
@@ -47,7 +47,7 @@
 ### MyApps
 
 ```bash
-  yay -S --needed brave-bin visual-studio-code-bin joplin-appimage obs-studio google-chrome qbittorrent gammastep mpv-git vim flatpak aria2 yt-dlp radeontop libva-mesa-driver libva-vdpau-driver-vp9-git droidcam-obs-plugin ff2mpv-native-messaging-host-git zenmonitor3-git geekbench speedtest-cli auto-cpufreq openssh nodejs-lts-hydrogen npm python flatseal tk
+  yay -S --needed brave-bin visual-studio-code-bin joplin-appimage obs-studio google-chrome qbittorrent gammastep mpv-git flatpak aria2 yt-dlp radeontop libva-mesa-driver libva-vdpau-driver-vp9-git droidcam-obs-plugin ff2mpv-native-messaging-host-git zenmonitor3-git geekbench speedtest-cli auto-cpufreq openssh nodejs-lts-hydrogen npm python flatseal tk
 ```
 
 ### Flatpaks : 
