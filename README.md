@@ -69,6 +69,7 @@
   cp -vr .config/* ~/.config/
   cp -vr .local/bin/* ~/.local/bin/
   mv ~/.config/backgrounds/wall5.png ~/walls/
+  cp .xinitrc .zshrc .zprofile ~/
 ```
 
 That's it, Enjoy !!
