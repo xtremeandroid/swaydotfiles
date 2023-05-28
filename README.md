@@ -24,11 +24,11 @@
 
 ### Dependencies
 
-* yay -S --needed sway fastfetch gnome-keyring git libsecret gvfs-mtp papirus-icon-theme autotiling qogir-gtk-theme zsh kitty wlogout swaylock-effects polkit-gnome sddm-git thunar thunar-archive-plugin file-roller p7zip pavucontrol brightnessctl lxappearance xdg-user-dirs dunst swww-git swayidle qogir-icon-theme grim ttf-font-awesome-5 otf-font-awesome-5 xorg-xwayland mpd mpc ncmpcpp
+* yay -S --needed sway fastfetch gnome-keyring git libsecret gvfs-mtp papirus-icon-theme autotiling qogir-gtk-theme zsh kitty wlogout swaylock-effects polkit-gnome sddm-git thunar thunar-archive-plugin file-roller p7zip pavucontrol brightnessctl lxappearance xdg-user-dirs dunst swww-git swayidle qogir-icon-theme grim ttf-font-awesome-5 otf-font-awesome-5 xorg-xwayland mpd mpc ncmpcpp firefox ttf-dejavu inter-font fuzzel
 
 ### MyApps
 
-* yay -S --needed brave-bin firefox visual-studio-code-bin joplin-appimage obs-studio google-chrome qbittorrent gammastep mpv  vim flatpak aria2 yt-dlp radeontop libva-mesa-driver libva-vdpau-driver-vp9-git droidcam-obs-plugin ff2mpv-native-messaging-host-git zenmonitor3-git geekbench speedtest-cli auto-cpufreq gimp kdenlive openssh
+* yay -S --needed brave-bin visual-studio-code-bin joplin-appimage obs-studio google-chrome qbittorrent gammastep mpv  vim flatpak aria2 yt-dlp radeontop libva-mesa-driver libva-vdpau-driver-vp9-git droidcam-obs-plugin ff2mpv-native-messaging-host-git zenmonitor3-git geekbench speedtest-cli auto-cpufreq gimp kdenlive openssh
 
 ### Now Just copy the.config/ folder from this git to your ~/.config/
 
