@@ -15,6 +15,7 @@
 
 ```bash
   sudo pacman -S --needed git base-devel
+  cd /tmp/
   git clone https://aur.archlinux.org/yay-bin.git
   cd yay-bin
   makepkg -si
@@ -64,6 +65,7 @@
   mkdir -p ~/.config/
   mkdir -p ~/.local/bin/
   mkdir -p ~/walls/
+  cd /tmp/
   git clone https://github.com/xtremeandroid/swaydotfiles.git
   cd swaydotfiles
   cp -vr .config/* ~/.config/
