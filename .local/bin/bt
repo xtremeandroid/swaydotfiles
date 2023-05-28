@@ -1,5 +1,0 @@
-#!/bin/sh
-
-op="8C:64:A2:5E:4E:0E"
-bluetoothctl poweron
-bluetoothctl connect $op
