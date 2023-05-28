@@ -19,6 +19,23 @@
   cd yay-bin
   makepkg -si
 ```
+### Make pacman faster
+```bash
+  sudo pacman -S reflector
+  sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bkp
+  sudo reflector --country 'India' --latest 5 --age 2 --fastest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+  sudo echo "MaxParallelDownloads = 10" >> /etc/pacman.conf
+```
+
+
+
+
+### Dependencies
+
+```bash
+  yay -S --needed sway waybar fastfetch gnome-keyring git libsecret gvfs-mtp papirus-icon-theme autotiling qogir-gtk-theme zsh kitty wlogout swaylock-effects polkit-gnome sddm-git thunar thunar-archive-plugin file-roller p7zip pavucontrol brightnessctl lxappearance xdg-user-dirs dunst swww-git swayidle qogir-icon-theme grim ttf-font-awesome-5 otf-font-awesome-5 xorg-xwayland mpd mpc ncmpcpp firefox ttf-dejavu inter-font fuzzel bluez bluez-utils blueman network-manager-applet xdg-desktop-portal-wlr
+```
+
 ### ohMyZSH setup
 
 ```bash
@@ -26,12 +43,6 @@
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
-
-### Dependencies
-
-```bash
-  yay -S --needed sway fastfetch gnome-keyring git libsecret gvfs-mtp papirus-icon-theme autotiling qogir-gtk-theme zsh kitty wlogout swaylock-effects polkit-gnome sddm-git thunar thunar-archive-plugin file-roller p7zip pavucontrol brightnessctl lxappearance xdg-user-dirs dunst swww-git swayidle qogir-icon-theme grim ttf-font-awesome-5 otf-font-awesome-5 xorg-xwayland mpd mpc ncmpcpp firefox ttf-dejavu inter-font fuzzel bluez bluez-utils blueman network-manager-applet xdg-desktop-portal-wlr
-``` 
 
 ### MyApps
 
