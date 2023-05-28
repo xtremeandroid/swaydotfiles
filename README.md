@@ -21,7 +21,7 @@
 ```
 ### Make pacman faster
 ```bash
-  sudo pacman -S reflector
+  sudo pacman -S --needed reflector
   sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bkp
   sudo reflector --country 'India' --latest 5 --age 2 --fastest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
   sudo sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
