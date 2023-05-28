@@ -33,6 +33,7 @@
 * flatpaks : 
 * sudo flatpak install flathub org.gimp.GIMP
 * sudo flatpak install flathub org.kde.kdenlive
+* sudo flatpak install flathub org.onlyoffice.desktopeditors
 
 ### Now Just copy the.config/ folder from this git to your ~/.config/
 
