@@ -10,6 +10,12 @@
 * Video - mpv
 * NightLight - gammastep
 
+## Screenshots
+![1](https://github.com/xtremeandroid/swaydotfiles/assets/62198074/e66760c5-2273-4899-afa3-0f4558a22524)
+![2](https://github.com/xtremeandroid/swaydotfiles/assets/62198074/66ac7b41-d76f-4238-b9a6-c5bf10afaa5d)
+![3](https://github.com/xtremeandroid/swaydotfiles/assets/62198074/01d5fc48-c43d-4aad-98b4-b74d775bf857)
+![4](https://github.com/xtremeandroid/swaydotfiles/assets/62198074/7d0b98cc-7802-423d-84a0-0d9d15dd5150)
+
 ## How to get this setup?
 
 ### Install yay (AUR Helper)
@@ -77,5 +83,4 @@
 
 That's it, Enjoy !!
 
-## Screenshots
-![2023-05-21T08:27:33,985969455+05:30](https://github.com/xtremeandroid/swaydotfiles/assets/62198074/c8b78bba-3d22-4868-945a-94e83dd96d0b)
+
