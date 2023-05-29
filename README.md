@@ -1,4 +1,5 @@
-## Arch Sway Rice
+## Minimal Arch Sway Rice That Just Works.
+
 * Terminal - kitty
 * Menu - fuzzel
 * Power Menu - wlogout
