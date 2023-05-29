@@ -8,10 +8,8 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 
 exec /usr/bin/xdg-user-dirs-update
 exec swww init
-exec nextwall
 exec dunst
 exec_always --no-startup-id autotiling
-exec mpd
 exec gammastep
 exec nm-applet
 exec blueman-applet

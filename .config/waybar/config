@@ -2,9 +2,9 @@
     "layer": "top",
     "position": "bottom",
     "height": 30,
-    "modules-left": ["sway/workspaces", "sway/window"],
-    "modules-center": ["mpd"],
-    "modules-right": ["tray","battery","pulseaudio", "clock"],
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["tray","backlight","battery","pulseaudio", "clock"],
     "sway/mode": {
         "format": " {}"
     },
@@ -99,7 +99,15 @@
         "format-alt": "{icon}",
         "format-alt-click": "click-left",
         "format-icons": ["", ""],
-        "on-scroll-up": "light -A 1",
-        "on-scroll-down": "light -U 1"
+        "on-scroll-up": "brightnessctl set 2%+",
+        "on-scroll-down": "brightnessctl set 2%-"
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 18,
+        "icon-theme": "Papirus",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
     }
 }

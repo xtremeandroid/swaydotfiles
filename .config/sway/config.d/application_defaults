@@ -5,10 +5,10 @@ for_window [app_id="firefox"] focus
 assign [class="firefox"] 2
 for_window [class="firefox"] focus
 
-assign [app_id="code"] 3
+assign [app_id="code"] 4
 for_window [app_id="firefox"] focus
 
-assign [class="code"] 3
+assign [class="code"] 4
 for_window [class="firefox"] focus
 
 
