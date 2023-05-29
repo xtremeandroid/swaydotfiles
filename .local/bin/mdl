@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd ~/Music
 printf "Enter Album Name: "
 read albumname
 mkdir -p "$albumname"
@@ -8,5 +9,5 @@ urls=$(curl -s "$1" | grep -oiE "https://pagalnew.com/songs/.*" | cut -d\" -f1 |
 for url in $urls;
 do
     echo "Downloading $url...."
-    aria2c -d "$albumname" "https://pagalnew.com$(curl -s "$url" | grep "320 KBPS Song Download" | cut -d'"' -f8)"
+    aria2c -x 16 -s 16 -d "$albumname" "https://pagalnew.com$(curl -s "$url" | grep "320 KBPS Song Download" | cut -d'"' -f8)"
 done
