@@ -182,3 +182,13 @@ bindsym $mod+r mode "resize"
     bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
     bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
 
+
+# Idle  
+### Idle configuration
+exec swayidle -w \
+          timeout 300 'swaylock -f' \
+          timeout 305 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          before-sleep 'swaylock -f'
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
