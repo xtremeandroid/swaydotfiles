@@ -79,8 +79,6 @@
   cp -vr .local/bin/* ~/.local/bin/
   mv ~/.config/backgrounds/wall5.png ~/walls/
   cp .xinitrc .zshrc .zprofile ~/
-  swww init
-  swww img ~/walls/wall5.png
 ```
 
 That's it, Enjoy !!
