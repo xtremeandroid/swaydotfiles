@@ -55,7 +55,7 @@
 ### MyApps
 
 ```bash
-  yay -S --needed brave-bin visual-studio-code-bin joplin-appimage obs-studio google-chrome qbittorrent gammastep mpv-git flatpak aria2 yt-dlp radeontop libva-mesa-driver libva-vdpau-driver-vp9-git droidcam-obs-plugin ff2mpv-native-messaging-host-git zenmonitor3-git geekbench auto-cpufreq openssh nodejs-lts-hydrogen npm python flatseal tk python-pip ytfzf ueberzugpp fzf
+  yay -S --needed brave-bin visual-studio-code-bin joplin-appimage obs-studio google-chrome qbittorrent gammastep mpv flatpak aria2 yt-dlp radeontop libva-mesa-driver libva-vdpau-driver-vp9-git droidcam-obs-plugin ff2mpv-native-messaging-host-git zenmonitor3-git geekbench auto-cpufreq openssh nodejs-lts-hydrogen npm python flatseal tk python-pip ytfzf ueberzugpp fzf
 ```
 
 ### Flatpaks : 
