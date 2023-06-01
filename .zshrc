@@ -109,3 +109,5 @@ alias ytd="yt-dlp -f 'bv*+ba' --embed-thumbnail --convert-thumbnails jpg --ppa '
 alias cpum="sudo auto-cpufreq --monitor"
 alias cpus="auto-cpufreq --stats"
 alias dfast="aria2c -x 16 -s 16"
+alias yts="ytfzf -t -T kitty"
+alias ytsd="ytfzf -t -T kitty -d"
