@@ -6,7 +6,7 @@ rm -rf swaydotfiles
 git clone https://github.com/xtremeandroid/swaydotfiles
 
 cd ~/.config
-cp -vr brave-flags.conf chrome-flags.conf chromium-flags.conf code-flags.conf electron-flags.conf dunst gammastep gtk-3.0 gtk-4.0 kitty mpd mpv sway swaylock waybar wlogout fuzzel ~/gitRepos/swaydotfiles/.config
+cp -vr brave-flags.conf chrome-flags.conf chromium-flags.conf code-flags.conf electron-flags.conf dunst gammastep kitty mpd mpv sway swaylock waybar wlogout fuzzel ~/gitRepos/swaydotfiles/.config
 
 cd
 cp -vr .zprofile .zshrc ~/gitRepos/swaydotfiles/
