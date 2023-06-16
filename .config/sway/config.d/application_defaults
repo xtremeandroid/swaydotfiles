@@ -1,44 +1,44 @@
-# Assign workspaces
-assign [app_id="firefox"] 2
-for_window [app_id="firefox"] focus
+# # Assign workspaces
+# assign [app_id="firefox"] 2
+# for_window [app_id="firefox"] focus
 
-assign [class="firefox"] 2
-for_window [class="firefox"] focus
+# assign [class="firefox"] 2
+# for_window [class="firefox"] focus
 
-assign [app_id="code"] 4
-for_window [app_id="firefox"] focus
+# assign [app_id="code"] 4
+# for_window [app_id="firefox"] focus
 
-for_window [app_id="code"] focus
-for_window [class="code"] focus
-assign [class="code"] 4
-for_window [class="firefox"] focus
+# for_window [app_id="code"] focus
+# for_window [class="code"] focus
+# assign [class="code"] 4
+# for_window [class="firefox"] focus
 
-assign [app_id="mpv"] 10
-for_window [app_id="mpv"] focus
+# assign [app_id="mpv"] 10
+# for_window [app_id="mpv"] focus
 
-assign [app_id="kitty"] 1
-for_window [app_id="kitty"] focus
+# assign [app_id="kitty"] 1
+# for_window [app_id="kitty"] focus
 
-assign [app_id="google-chrome"] 5  
-for_window [app_id="google-chrome"] focus
+# assign [app_id="google-chrome"] 5  
+# for_window [app_id="google-chrome"] focus
 
-assign [app_id="virt-manager"] 7  
-for_window [app_id="virt-manager"] focus
+# assign [app_id="virt-manager"] 7  
+# for_window [app_id="virt-manager"] focus
 
-assign [app_id="thunar"] 3  
-for_window [app_id="thunar"] focus
+# assign [app_id="thunar"] 3  
+# for_window [app_id="thunar"] focus
 
-assign [app_id="com.obsproject.Studio"] 9
-for_window [app_id="com.obsproject.Studio"] focus
+# assign [app_id="com.obsproject.Studio"] 9
+# for_window [app_id="com.obsproject.Studio"] focus
 
-for_window [app_id="xed"] focus
+# for_window [app_id="xed"] focus
 
 
-assign [app_id="org.kde.kdenlive"] 8
-for_window [app_id="org.kde.kdenlive"] focus
+# assign [app_id="org.kde.kdenlive"] 8
+# for_window [app_id="org.kde.kdenlive"] focus
 
-assign [app_id="brave-browser"] 6  
-for_window [app_id="brave-browser"] focus
+# assign [app_id="brave-browser"] 6  
+# for_window [app_id="brave-browser"] focus
 
 # set floating (nontiling)for apps needing it:
 for_window [class="Yad" instance="yad"] floating enable

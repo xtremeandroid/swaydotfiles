@@ -1,3 +1,5 @@
 .local/bin/f2py
 .local/bin/f2py3
 .local/bin/f2py3.11
+.config/gtk-4.0/
+.config/gtk-3.0/

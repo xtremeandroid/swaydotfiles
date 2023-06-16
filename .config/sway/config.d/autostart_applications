@@ -13,13 +13,3 @@ exec_always --no-startup-id autotiling
 exec gammastep
 exec nm-applet --indicator
 exec blueman-applet
-
-# MyApps
-
-exec thunar
-exec code
-exec google-chrome-stable
-exec brave
-exec kitty
-exec virt-manager
-exec firefox
