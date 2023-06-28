@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -107,7 +107,5 @@ source $ZSH/oh-my-zsh.sh
 alias ytmp3="yt-dlp -f 'ba' -x --audio-format mp3"
 alias ytd="yt-dlp -f 'bv*+ba' --embed-thumbnail --convert-thumbnails jpg --ppa 'ThumbnailsConvertor+ffmpeg_o:-q:v 1' --add-metadata --embed-metadata --sub-langs en --write-auto-subs --embed-subs --merge-output-format mkv"
 alias cpum="sudo auto-cpufreq --monitor"
-alias cpus="auto-cpufreq --stats"
+alias cpus="sudo auto-cpufreq --stats"
 alias dfast="aria2c -x 16 -s 16"
-alias yts="ytfzf -t -T kitty"
-alias ytsd="ytfzf -t -T kitty -d"

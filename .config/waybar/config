@@ -1,129 +1,165 @@
 {
-    "layer": "top",
-    "position": "bottom",
-    "height": 30,
-    "modules-left": ["sway/workspaces"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["idle_inhibitor","tray","backlight","battery","pulseaudio", "clock"],
-    "sway/mode": {
-        "format": " {}"
+  "layer": "top",
+  "position": "bottom",
+  "height": 30,
+  "modules-left": [
+    "sway/workspaces",
+    "sway/window"
+  ],
+  "modules-center": [
+    "wlr/taskbar"
+  ],
+  "modules-right": [
+    "idle_inhibitor",
+    "tray",
+    "backlight",
+    "battery",
+    "pulseaudio",
+    "clock"
+  ],
+  "sway/mode": {
+    "format": " {}"
+  },
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "disable-markup": false,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1 <span font='Font Awesome 5 Free 10'></span>",
+      "2": "2 <span font='Font Awesome 5 Free 11'></span>",
+      "3": "3 <span font='Font Awesome 5 Free 11'></span>",
+      "4": "4 <span font='Font Awesome 5 Free 11'></span>",
+      "5": "5 <span font='Font Awesome 5 Free 11'></span>",
+      "6": "6 <span font='Font Awesome 5 Free 11'></span>",
+      "7": "7 <span font='Font Awesome 5 Free 11'></span>",
+      "8": "8 <span font='Font Awesome 5 Free 11'></span>",
+      "9": "9 <span font='Font Awesome 5 Free 11'></span>",
+      "10": "0 <span font='Font Awesome 5 Free 11'></span>"
+    }
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "sway/window": {
+    "max-length": 60,
+    "tooltip": false
+  },
+  "clock": {
+    "interval": 60,
+    "format": "{:%H:%M}",
+    "tooltip": false
+  },
+  "cpu": {
+    "interval": 30,
+    "format": "︁ {}%",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 30,
+    "format": "{used:0.1f}G",
+    "tooltip": false
+  },
+  "custom/powermenu": {
+    "return-type": "json",
+    "exec": "~/.config/waybar/modules/powermenu.sh",
+    "format": "<span font='Font Awesome 5 Free 9'>{icon}</span>  {}",
+    "format-icons": [
+      ""
+    ],
+    "interval": 3600,
+    "escape": true,
+    "on-click": "~/.config/wofi/wofi-power.sh"
+  },
+  "battery": {
+    "format": "{capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "format-time": " ({H}h{M}m)",
+    "format-charging": "<span font='Font Awesome 5 Free'> </span>{capacity}%",
+    "format-full": "<span font='Font Awesome 5 Free'> </span> Full",
+    "interval": 60,
+    "states": {
+      "warning": 25,
+      "critical": 10
     },
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": false,
-        "disable-markup": false,
-        "format": "{icon}",
-        "format-icons": {
-            "1": "1 <span font='Font Awesome 5 Free 10'></span>",
-            "2": "2 <span font='Font Awesome 5 Free 11'></span>",
-            "3": "3 <span font='Font Awesome 5 Free 11'></span>",
-            "4": "4 <span font='Font Awesome 5 Free 11'></span>",
-            "5": "5 <span font='Font Awesome 5 Free 11'></span>",
-            "6": "6 <span font='Font Awesome 5 Free 11'></span>",
-            "7": "7 <span font='Font Awesome 5 Free 11'></span>",
-            "8": "8 <span font='Font Awesome 5 Free 11'></span>",
-            "9": "9 <span font='Font Awesome 5 Free 11'></span>",
-            "10": "0 <span font='Font Awesome 5 Free 11'></span>"
-        }
+    "tooltip": false
+  },
+  "network": {
+    "format": "{icon}",
+    "format-alt": "<span font='Font Awesome 5 Free 10'>︁</span> ︁{ipaddr}/{cidr} {icon}",
+    "format-alt-click": "click-left",
+    "format-wifi": "<span font='Font Awesome 5 Free 10'></span> {essid} ({signalStrength}%)",
+    "format-ethernet": "<span font='Font Awesome 5 Free 10'>︁</span> {ifname}",
+    "format-disconnected": "⚠ Disconnected",
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
+    "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
+    "format-alt-click": "click-right",
+    "format-muted": "<span font='Font Awesome 5 Free 11'></span>",
+    "format-icons": {
+      "phone": [
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      "default": [
+        "",
+        "",
+        "",
+        ""
+      ]
     },
-    "tray": {
-        // "icon-size": 20,
-        "spacing": 10
-    },
-    "sway/window": {
-        "max-length": 60,
-        "tooltip": false
-    },
-    
-    "clock": {
-        "interval": 60,
-        "format": "{:%H:%M}",
-        "tooltip": false
-    },
-
-    "cpu": {
-        "interval": 30,
-        "format": "︁ {}%",
-        "max-length": 10
-    },
-    "memory": {
-        "interval": 30,
-        "format": "{used:0.1f}G",
-        "tooltip": false
-    },
-    "custom/powermenu": {
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/powermenu.sh",
-        "format": "<span font='Font Awesome 5 Free 9'>{icon}</span>  {}",
-        "format-icons": [""],
-        "interval": 3600,
-        "escape": true,
-        "on-click": "~/.config/wofi/wofi-power.sh"
-    },
-    "battery": {
-        "format": "{capacity}%",
-        "format-icons": ["", "", "", "", ""],
-        "format-time": " ({H}h{M}m)",
-        "format-charging": "<span font='Font Awesome 5 Free'> </span>{capacity}%",
-        "format-full": "<span font='Font Awesome 5 Free'> </span> Full",
-        "interval": 60,
-        "states": {
-            "warning": 25,
-            "critical": 10
-        },
-        "tooltip": false
-    },
-    "network": {
-        "format": "{icon}",
-        "format-alt": "<span font='Font Awesome 5 Free 10'>︁</span> ︁{ipaddr}/{cidr} {icon}",
-        "format-alt-click": "click-left",
-        "format-wifi": "<span font='Font Awesome 5 Free 10'></span> {essid} ({signalStrength}%)",
-        "format-ethernet": "<span font='Font Awesome 5 Free 10'>︁</span> {ifname}",
-        "format-disconnected": "⚠ Disconnected",
-        "tooltip": false
-    },
-    "pulseaudio": {
-        "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
-        "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
-        "format-alt-click": "click-right",
-        "format-muted": "<span font='Font Awesome 5 Free 11'></span>",
-        "format-icons": {
-            "phone": [" ", " ", " ", " "],
-            "default": ["", "", "", ""]
-        },
-        "scroll-step": 2,
-        "on-click": "pavucontrol",
-        "tooltip": false
-    },
-    "backlight": {
-        "format": "{icon} {percent}%",
-        "format-alt": "{icon}",
-        "format-alt-click": "click-left",
-        "format-icons": ["", ""],
-        "on-scroll-up": "brightnessctl set 2%+",
-        "on-scroll-down": "brightnessctl set 2%-"
-    },
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "icon-size": 18,
-        "icon-theme": "Papirus",
-        "tooltip-format": "{title}",
-        "on-click": "activate",
-        "on-click-middle": "close"
-    },
-    "idle_inhibitor": {
-        "format": "{icon} ",
-        "format-icons":{
-            "activated": "",
-            "deactivated": ""
-        }
-    },
-    "temperature": {
-        "interval": 60,
-		"critical-threshold": 80,
-		"format-critical": "{icon} {temperatureC}°C",
-		"format": "{icon} {temperatureC}°C",
-		"format-icons": ["", "", "", "", ""],
-		"tooltip": true
-	}
+    "scroll-step": 2,
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-alt": "{icon}",
+    "format-alt-click": "click-left",
+    "format-icons": [
+      "",
+      ""
+    ],
+    "on-scroll-up": "brightnessctl set 2%+",
+    "on-scroll-down": "brightnessctl set 2%-"
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 22,
+    "icon-theme": "Papirus",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close"
+  },
+  "idle_inhibitor": {
+    "format": "{icon} ",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "temperature": {
+    "interval": 60,
+    "critical-threshold": 80,
+    "format-critical": "{icon} {temperatureC}°C",
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "tooltip": true
+  }
 }
