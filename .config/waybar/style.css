@@ -1,125 +1,132 @@
-#waybar {
-    font-family: Inter, Cantarell, Noto Sans, sans-serif;
-    font-size: 14px;
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
 }
 
-/* #window {
-    padding: 0px;
-} */
-
 window#waybar {
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    text-shadow: none;
-    transition-duration: 0s;
-    color: rgba(217, 216, 216, 1);
-    background: #1a1b26; 
-    font-weight: bolder;
-} 
+  background-color: #282a36;
+  color: #f8f8f2;
+  border-radius: 0;
+}
 
-#workspaces {
-    margin: 0 5px;
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+  background-color: #3f3f3f;
+}
+
+window#waybar.chromium {
+  background-color: #000000;
+  border: none;
+}
+
+button {
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px #bd93f9;
 }
 
 #workspaces button {
-    padding: 0 5px;
-    color: #565f89;
-    border: 1px solid rgba(9, 85, 225, 0);
-    min-width: 33px;
-}
-
-#workspaces button.visible {
-    color: #a9b1d6;
-}
-
-#workspaces button.focused {
-    border-top: 3px solid #7aa2f7;
-    border-bottom: 3px solid #7aa2f7;
-}
-
-#workspaces button.urgent {
-    background-color: #a96d1f;
-    color: white;
+  padding: 0 5px;
+  background-color: transparent;
+  color: #f8f8f2;
 }
 
 #workspaces button:hover {
-    box-shadow: inherit;
-    border-color: #bb9af7;
-    color: #bb9af7;
+  background: rgba(0, 0, 0, 0.2);
 }
-
-/* Repeat style here to ensure properties are overwritten as there's no !important and button:hover above resets the colour */
 
 #workspaces button.focused {
-    color: #7aa2f7;
-}
-#workspaces button.focused:hover {
-    color: #bb9af7;
+  background-color: #64727d;
+  box-shadow: inset 0 -3px #bd93f9;
 }
 
-#pulseaudio {
-    /* font-size: 26px; */
+#workspaces button.urgent {
+  background-color: #eb4d4b;
 }
 
-#custom-recorder {
-	font-size: 18px;
-	margin: 2px 7px 0px 7px;
-	color:#ee2e24;
+#mode {
+  border-bottom: 3px solid #bd93f9;
 }
 
-#tray,
-#mode,
+#clock,
 #battery,
-#temperature,
 #cpu,
 #memory,
+#disk,
+#temperature,
+#backlight,
 #network,
 #pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
 #idle_inhibitor,
-#sway-language,
-#backlight,
-#custom-storage,
-#custom-cpu_speed,
-#custom-powermenu,
-#custom-spotify,
-#custom-weather,
-#custom-mail,
-#custom-media {
-    margin: 0px 0px 0px 5px;
-    padding: 0 5px;
-    /* border-top: 3px solid rgba(217, 216, 216, 0.5); */
+#scratchpad,
+#mpd {
+  padding: 0 8px;
+  color: #f8f8f2;
 }
 
-#clock {
-    margin:     0px 10px;
-    min-width:  14px;
+#window,
+#workspaces {
+  margin: 0 4px;
 }
 
-
-#battery.warning {
-    color: rgba(255, 210, 4, 1);
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
 }
 
-#battery.critical {
-    color: rgba(238, 46, 36, 1);
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
 }
 
-#battery.charging {
-    color: rgba(217, 216, 216, 1);
+#battery {
+  /* background-color: #ffffff; */
+  color: #f8f8f2;
 }
 
-#custom-storage.warning {
-    color: rgba(255, 210, 4, 1);
-}
-
-#custom-storage.critical {
-    color: rgba(238, 46, 36, 1);
+#battery.charging,
+#battery.plugged {
+  color: #f8f8f2;
 }
 
 @keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: black;
-    }
+  to {
+    /* background-color: #ffffff; */
+    color: #f8f8f2;
+  }
+}
+
+#battery.critical:not(.charging) {
+  /* background-color: #f53c3c; */
+  color: #f53c3c;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }

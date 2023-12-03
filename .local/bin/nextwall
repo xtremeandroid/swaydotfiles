@@ -1,4 +1,0 @@
-#!/bin/sh
-
-wall=$(find ~/walls/ -type f -name "*.jpg" -o -name "*.png" | shuf -n 1)
-swww img $wall
